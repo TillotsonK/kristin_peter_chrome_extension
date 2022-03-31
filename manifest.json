@@ -1,11 +1,11 @@
 {
-    "name": "",
+    "name": "MDN Quick Check",
     "version": "1.0.0",
-    "description": "",
+    "description": "Searches top ten links on MDN",
     "manifest_version": 3,
     "author": "Kristin Tillotson & Peter Steinberg",
     "action":{
         "default_popup": "index.html",
-        "default_title": ""
+        "default_title": "MDN Search Window"
     }
 }

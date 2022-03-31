@@ -1,11 +1,12 @@
 let searchTerm;
+const container = document.querySelector('#container')
 
 function createSlots(myJson, i) {
     const holder = document.createElement('div')
     holder.setAttribute('class', 'holder');
-    document.querySelector('body').appendChild(holder);
+    container.appendChild(holder);
 
-    const title = document.createElement('p');
+    const title = document.createElement('b');
     // message.setAttribute('id', 'message');
     title.innerHTML = myJson['documents'][i]['title'];
     holder.appendChild(title);
@@ -17,9 +18,10 @@ function createSlots(myJson, i) {
 
     const url = document.createElement('a');
     // createdAt.setAttribute('id', 'createdAt');
-    let target = `https://developer.mozilla.org${myJson['documents'][i]['mdn_url']}`
-    url.setAttribute(`href`, target)
-    url.innerHTML = target;
+    let targetURL = `https://developer.mozilla.org${myJson['documents'][i]['mdn_url']}`
+    url.setAttribute(`href`, targetURL)
+    url.setAttribute('target', '_blank')
+    url.innerHTML = targetURL;
     holder.appendChild(url);
   }
 //
@@ -33,7 +35,10 @@ button.addEventListener('click',()=>{
 fetch(mdnUrl)
     .then(response => response.json())
     .then(myJson => {
-        for(let i = 0; i < 10; i++){
+       while(container.firstChild){
+           container.removeChild(container.firstChild)
+        }
+        for(let i = 0; i < 3; i++){
         createSlots(myJson, i)
         } 
     })
