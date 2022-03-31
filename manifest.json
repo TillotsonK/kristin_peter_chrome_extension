@@ -1,0 +1,11 @@
+{
+    "name": "",
+    "version": "1.0.0",
+    "description": "",
+    "manifest_version": 3,
+    "author": "Kristin Tillotson & Peter Steinberg",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": ""
+    }
+}
