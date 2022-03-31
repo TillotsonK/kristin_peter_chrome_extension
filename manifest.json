@@ -1,7 +1,7 @@
 {
     "name": "MDN Quick Check",
     "version": "1.0.0",
-    "description": "Searches top ten links on MDN",
+    "description": "Searches top three links on MDN",
     "manifest_version": 3,
     "author": "Kristin Tillotson & Peter Steinberg",
     "action":{
